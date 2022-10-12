@@ -24,24 +24,14 @@ const data = [
 function App() {
   return (
     <div className="App">
-      <Card
-        title={data[0].title}
-        price={data[0].price}
-        color={data[0].color}
-        date={data[0].date}
-      />
-      <Card
-        title={data[1].title}
-        price={data[1].price}
-        color={data[1].color}
-        date={data[1].date}
-      />
-      <Card
-        title={data[2].title}
-        price={data[2].price}
-        color={data[2].color}
-        date={data[2].date}
-      />
+      {data.map((item) => (
+        <Card
+          title={item.title}
+          price={item.price}
+          color={item.color}
+          date={item.date}
+        />
+      ))}
     </div>
   );
 }
